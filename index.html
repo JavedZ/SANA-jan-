@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2b102d">
+  <meta name="description" content="یک تحفه کوچک و عاشقانه برای SANA jan❤️ به مناسبت روز دختر">
+  <title>روز دختر مبارک، SANA jan❤️</title>
+  <style>
+    :root {
+      --pink: #ff7ca8;
+      --rose: #ff477e;
+      --cream: #fff0f5;
+      --gold: #ffd88a;
+      --night: #170d25;
+      --plum: #32143d;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; min-height: 100vh; overflow-x: hidden;
+      font-family: Tahoma, Arial, sans-serif; color: #fff8fc;
+      background:
+        radial-gradient(ellipse at 15% 10%, rgba(156,63,130,.34), transparent 35%),
+        radial-gradient(ellipse at 85% 25%, rgba(255,89,140,.19), transparent 32%),
+        linear-gradient(145deg, #170d25, #301337 55%, #160d26);
+    }
+    button { font: inherit; }
+    .stars, .floaters { position: fixed; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
+    .star { position: absolute; width: 3px; height: 3px; border-radius: 50%; background: #fff5cc; opacity: .7; animation: twinkle 2.4s infinite ease-in-out; }
+    @keyframes twinkle { 0%,100% {opacity:.18; transform:scale(.7)} 50% {opacity:1; transform:scale(1.5)} }
+    .heart-float { position: absolute; bottom: -40px; color: #ff80a9; opacity: .7; animation: rise linear forwards; }
+    @keyframes rise { to { transform: translateY(-115vh) rotate(25deg); opacity: 0; } }
+    .wrap { position: relative; z-index: 1; width: min(100% - 28px, 760px); margin: auto; padding: 28px 0 48px; }
+    .topline { text-align: center; color: var(--gold); font-size: .9rem; letter-spacing: .04em; }
+    h1 { margin: 10px 0 8px; text-align: center; font-size: clamp(2rem, 8vw, 3.4rem); line-height: 1.4; color: #ffe3ee; text-shadow: 0 0 24px #ff4e8b66; }
+    .subtitle { text-align: center; color: #f5cbdc; line-height: 2; margin: 0 auto 20px; max-width: 540px; }
+    .panel { background: linear-gradient(145deg, rgba(255,255,255,.10), rgba(255,255,255,.035)); border: 1px solid rgba(255,219,236,.2); border-radius: 26px; box-shadow: 0 20px 70px #09061166; backdrop-filter: blur(10px); }
+    .gift-area { display: grid; place-items: center; padding: 22px 14px 26px; }
+    .hint { text-align: center; color: #ffdfeb; margin: 0 0 8px; font-size: .96rem; }
+    .gift-button { border: 0; background: transparent; color: inherit; cursor: pointer; padding: 12px; width: min(100%, 340px); outline-offset: 8px; }
+    .gift-button:focus-visible, .main-btn:focus-visible { outline: 3px solid var(--gold); }
+    .gift-scene { height: 245px; position: relative; display: grid; place-items: center; perspective: 700px; }
+    .glow { position: absolute; width: 210px; height: 130px; border-radius: 50%; background: #ff477e44; filter: blur(28px); bottom: 20px; transition: .7s; }
+    .gift { position: relative; width: 190px; height: 142px; margin-top: 52px; filter: drop-shadow(0 18px 18px #09061188); }
+    .gift-base { position: absolute; bottom: 0; width: 190px; height: 112px; border-radius: 8px 8px 15px 15px; background: linear-gradient(110deg,#a91d65,#ff6b9b 48%,#d62f79); border: 1px solid #ffb6d0; }
+    .gift-base:before { content:""; position:absolute; inset:0 77px 0 77px; background:linear-gradient(90deg,#ffdfa1,#fff0c2,#e8a74c); }
+    .gift-lid { position: absolute; z-index: 3; top: 20px; left: -12px; width: 214px; height: 38px; border-radius: 7px; background: linear-gradient(100deg,#c72b77,#ff91b6 48%,#b91d68); border: 1px solid #ffd0e0; transform-origin: 12% 90%; transition: transform 1s cubic-bezier(.2,.8,.2,1), top 1s, opacity .6s; }
+    .gift-lid:before { content:""; position:absolute; left:88px; top:0; width:36px; height:100%; background:linear-gradient(90deg,#f2b95e,#fff0bd,#e5a143); }
+    .ribbon { position:absolute; z-index:4; left:78px; top:-2px; width:34px; height:112px; background:linear-gradient(90deg,#e7a54a,#fff0bd,#e7a54a); border-radius:4px; }
+    .bow { position:absolute; z-index:5; top:-28px; left:69px; width:52px; height:35px; }
+    .bow:before,.bow:after { content:""; position:absolute; width:31px; height:25px; border:7px solid #ffd987; border-radius: 80% 80% 20% 80%; transform:rotate(24deg); }
+    .bow:after { left:23px; transform:scaleX(-1) rotate(24deg); }
+    .bow-knot { position:absolute; z-index:6; top:-15px; left:91px; width:17px; height:20px; background:#ffe7a7; border-radius:7px; }
+    .gift.open .gift-lid { transform: translate(-8px,-105px) rotate(-20deg); opacity: .98; }
+    .gift.open .glow { transform: scale(1.45); background:#ff7cab88; }
+    .gift.open .gift-base { animation: pulse .8s 2; }
+    @keyframes pulse { 50% { filter: brightness(1.35); } }
+    .spark { position:absolute; z-index:8; opacity:0; color:#ffe8a6; font-size:25px; }
+    .gift.open .spark { animation: sparkle 1.4s ease-out forwards; }
+    .spark.s1 { top:35px; left:35px; } .spark.s2 { top:45px; right:25px; animation-delay:.15s; } .spark.s3 { top:4px; right:80px; animation-delay:.3s; } .spark.s4 { top:100px; left:10px; animation-delay:.4s; }
+    @keyframes sparkle { 0% { opacity:0; transform:scale(.2) translateY(15px) } 30% {opacity:1} 100% {opacity:0; transform:scale(1.4) translateY(-38px)} }
+    .main-btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:13px 20px; border:0; border-radius:999px; color:#39132c; font-weight:bold; cursor:pointer; background:linear-gradient(100deg,#ffe2a2,#ffb5cf); box-shadow:0 8px 24px #ff5e9850; transition:transform .2s; }
+    .main-btn:active { transform:scale(.97); }
+    .letter { display:none; margin-top:18px; padding:clamp(20px, 5vw, 34px); background:linear-gradient(145deg,#fff4f4,#ffe3ed); color:#652541; border-radius:22px; box-shadow:0 18px 60px #09061166; animation: appear .8s ease both; }
+    .letter.show { display:block; }
+    @keyframes appear { from {opacity:0; transform:translateY(18px) scale(.98)} to {opacity:1; transform:none} }
+    .letter h2 { margin:0 0 15px; text-align:center; color:#b52661; font-size:1.65rem; }
+    .letter p { line-height:2.15; margin: 12px 0; }
+    .letter .sign { text-align:left; color:#a32158; font-weight:bold; margin-top:22px; }
+    .divider { width:90px; height:2px; background:#e99ab8; margin:18px auto; }
+    .wishes { margin-top:18px; padding:22px; }
+    .wishes h2 { text-align:center; color:#ffe0eb; margin-top:0; }
+    .wish-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; }
+    .wish { border:1px solid #ffcee044; background:#ffffff09; border-radius:15px; text-align:center; padding:14px 8px; color:#ffe6ef; }
+    .wish span { display:block; font-size:1.5rem; margin-bottom:7px; }
+    .footer { text-align:center; color:#d8b4cb; font-size:.83rem; line-height:2; margin:24px 10px 0; }
+    .small { font-size:.78rem; color:#dcbfd1; text-align:center; margin:10px 0 0; }
+    @media (max-width:430px) { .wrap{width:min(100% - 20px,760px);padding-top:20px}.gift-scene{height:220px}.wish-grid{grid-template-columns:1fr 1fr}.panel{border-radius:21px}.subtitle{font-size:.95rem} }
+    @media (prefers-reduced-motion: reduce) { *,*::before,*::after {animation-duration:.01ms !important; animation-iteration-count:1 !important; scroll-behavior:auto !important; transition-duration:.01ms !important} }
+  </style>
+</head>
+<body>
+  <div class="stars" id="stars" aria-hidden="true"></div>
+  <div class="floaters" id="floaters" aria-hidden="true"></div>
+  <main class="wrap">
+    <div class="topline">یک تحفه کوچک از دل من، برای تو ✨</div>
+    <h1>روز دختر مبارک 🌷</h1>
+    <p class="subtitle">۱۹ میزان · روز دختر افغانستان<br>برای کسی که بودنش، دنیا را برایم قشنگ‌تر می‌کند.</p>
+
+    <section class="panel gift-area" aria-label="جعبه تحفه">
+      <p class="hint" id="hint">SANA jan❤️، این تحفه فقط برای توست…</p>
+      <button class="gift-button" id="giftButton" aria-label="جعبه تحفه را باز کن">
+        <div class="gift-scene">
+          <div class="glow"></div>
+          <div class="gift" id="gift">
+            <div class="gift-base"></div>
+            <div class="ribbon"></div>
+            <div class="gift-lid"></div>
+            <div class="bow"></div>
+            <div class="bow-knot"></div>
+            <span class="spark s1">✦</span><span class="spark s2">♥</span><span class="spark s3">✧</span><span class="spark s4">✦</span>
+          </div>
+        </div>
+      </button>
+      <button class="main-btn" id="openButton">🎁 تحفه‌ات را باز کن</button>
+      <p class="small">یک لمس کوچک، و یک پیام از ته دل من…</p>
+    </section>
+
+    <section class="letter" id="letter" aria-live="polite">
+      <h2>SANA jan❤️</h2>
+      <div class="divider"></div>
+      <p>نامزد عزیزم،</p>
+      <p>روز دختر مبارک، جان دلم! 🌷</p>
+      <p>امروز می‌خواهم به تو بگویم که آرزو دارم زندگی‌ات همیشه پر از لبخند، آرامش، امید و موفقیت باشد. امیدوارم هر روز به آرزوهای قشنگت نزدیک‌تر شوی و هیچ‌وقت نور امید در دلت خاموش نشود.</p>
+      <p>برای من، زیباترین هدیه این است که روزی زیر یک سقف، در کنار هم زندگی بسازیم؛ با احترام، مهربانی، خنده و پشتیبانی از رویاهای یکدیگر.</p>
+      <p>این جعبه شاید کوچک باشد، اما آرزوهای خوبم برای تو بسیار بزرگ‌اند. همیشه بدرخشی و همیشه دلیل لبخندت را داشته باشی. ❤️</p>
+      <div class="divider"></div>
+      <p style="text-align:center;font-weight:bold;color:#b52661">روز دختر مبارک، دختر قشنگ من 💝</p>
+      <p class="sign">با تمام مهرم،<br>کسی که آینده‌اش را در کنار تو تصور می‌کند ❤️</p>
+    </section>
+
+    <section class="panel wishes">
+      <h2>از ته دل برایت آرزو می‌کنم…</h2>
+      <div class="wish-grid">
+        <div class="wish"><span>🌸</span>شاد و خندان باشی</div>
+        <div class="wish"><span>✨</span>همیشه بدرخشی</div>
+        <div class="wish"><span>🌙</span>آرامش در دلت باشد</div>
+        <div class="wish"><span>💖</span>به آرزوهایت برسی</div>
+      </div>
+    </section>
+    <p class="footer">برای SANA jan❤️<br>با آرزوی روزهایی روشن، دلی آرام و آینده‌ای پر از عشق.</p>
+  </main>
+  <script>
+    const stars = document.getElementById('stars');
+    const floaters = document.getElementById('floaters');
+    const gift = document.getElementById('gift');
+    const giftButton = document.getElementById('giftButton');
+    const openButton = document.getElementById('openButton');
+    const letter = document.getElementById('letter');
+    const hint = document.getElementById('hint');
+    let opened = false;
+
+    for (let i = 0; i < 55; i++) {
+      const star = document.createElement('i');
+      star.className = 'star';
+      star.style.left = Math.random() * 100 + '%';
+      star.style.top = Math.random() * 100 + '%';
+      star.style.animationDelay = Math.random() * 3 + 's';
+      star.style.animationDuration = (1.5 + Math.random() * 3) + 's';
+      stars.appendChild(star);
+    }
+
+    function floatHeart() {
+      const heart = document.createElement('span');
+      heart.className = 'heart-float';
+      heart.textContent = ['♥','♡','✦','🌸'][Math.floor(Math.random() * 4)];
+      heart.style.left = Math.random() * 100 + '%';
+      heart.style.fontSize = (14 + Math.random() * 18) + 'px';
+      heart.style.animationDuration = (6 + Math.random() * 6) + 's';
+      floaters.appendChild(heart);
+      setTimeout(() => heart.remove(), 12500);
+    }
+    for (let i = 0; i < 10; i++) setTimeout(floatHeart, i * 450);
+    setInterval(floatHeart, 950);
+
+    function openGift() {
+      if (opened) {
+        letter.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+      }
+      opened = true;
+      gift.classList.add('open');
+      letter.classList.add('show');
+      hint.textContent = 'تحفه‌ات باز شد، SANA jan❤️ — این حرف‌ها از دل من است.';
+      openButton.textContent = '💌 نامه‌ات را دوباره بخوان';
+      setTimeout(() => letter.scrollIntoView({ behavior: 'smooth', block: 'center' }), 500);
+    }
+    giftButton.addEventListener('click', openGift);
+    openButton.addEventListener('click', openGift);
+  </script>
+</body>
+</html>
